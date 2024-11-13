@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: neilSplit_left
+    shield: stealth_left
   - board: nice_nano_v2
-    shield: neilSplit_right
+    shield: stealth_right
