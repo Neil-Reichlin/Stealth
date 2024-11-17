@@ -6,20 +6,22 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+/ { 
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "default_kscan";
+        wakeup-source;
+        diode-direction = "col2row";
 
-kscan0: kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
-    label = "default_kscan";
-    wakeup-source;
-    diode-direction = "col2row";
-
-    row-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                    <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                    <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                    <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };
 };
 
+/ {
 default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -37,4 +39,4 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,6) RC(3,7) RC(3,8) RC(3,9)
                         RC(4,3) RC(4,4) RC(4,5)  RC(4,6) RC(4,7) RC(4,8)
         >;
     };
-
+};
