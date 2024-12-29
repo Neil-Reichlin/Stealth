@@ -14,45 +14,67 @@
         // Custom shift behaviors for number keys
         shift_0: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp RPAREN &kp N0>; // Normal: 0, Shift: )
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp EQUAL>; // Normal: 0, Shift: )
+            mods = <MOD_LSFT>;
         };
         shift_1: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PLUS &kp N1>; // Normal: 1, Shift: !
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp PLUS>; // Normal: 1, Shift: +
+            mods = <MOD_LSFT>;
         };
         shift_2: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp DOUBLE_QUOTES &kp N2>; // Normal: 2, Shift: @
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp DOUBLE_QUOTES>; // Normal: 2, Shift: "
+            mods = <MOD_LSFT>;
         };
         shift_3: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp ASTER &kp N3>; // Normal: 3, Shift: #
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp ASTER>; // Normal: 3, Shift: *
+            mods = <MOD_LSFT>;
         };
         shift_4: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp DLLAR &kp N4>; // Normal: 4, Shift: $
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp DLLAR>; // Normal: 4, Shift: $
+            mods = <MOD_LSFT>;
         };
         shift_5: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PERCENT &kp N5>; // Normal: 5, Shift: %
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp PERCENT>; // Normal: 5, Shift: %
+            mods = <MOD_LSFT>;
         };
         shift_6: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp AMPS &kp N6>; // Normal: 6, Shift: ^
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp AMPS>; // Normal: 6, Shift: &
+            mods = <MOD_LSFT>;
         };
         shift_7: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp FSLH &kp N7>; // Normal: 7, Shift: /
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp FSLH>; // Normal: 7, Shift: /
+            mods = <MOD_LSFT>;
         };
         shift_8: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LPAREN &kp N8>; // Normal: 8, Shift: *
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp LPAREN>; // Normal: 8, Shift: (
+            mods = <MOD_LSFT>;
         };
         shift_9: behavior {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp RPAREN &kp N9>; // Normal: 9, Shift: (
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp RPAREN>; // Normal: 9, Shift: )
+            mods = <MOD_LSFT>;
         };
     };
+
+
 
         keymap {
         compatible = "zmk,keymap";
