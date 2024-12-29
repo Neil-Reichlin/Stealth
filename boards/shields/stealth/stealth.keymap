@@ -39,7 +39,7 @@
         shift_4: shift_4_behavior {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp DLLAR>; // Normal: 4, Shift: $
+            bindings = <&kp N4>, <&kp DOLLAR>; // Normal: 4, Shift: $
             mods = <MOD_LSFT>;
         };
         shift_5: shift_5_behavior {
@@ -51,7 +51,7 @@
         shift_6: shift_6_behavior {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp AMPS>; // Normal: 6, Shift: &
+            bindings = <&kp N6>, <&kp AMPERSAND>; // Normal: 6, Shift: &
             mods = <MOD_LSFT>;
         };
         shift_7: shift_7_behavior {
@@ -63,13 +63,13 @@
         shift_8: shift_8_behavior {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp LPAREN>; // Normal: 8, Shift: (
+            bindings = <&kp N8>, <&kp LEFT_PARENTHESIS>; // Normal: 8, Shift: (
             mods = <MOD_LSFT>;
         };
         shift_9: shift_9_behavior {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp RPAREN>; // Normal: 9, Shift: )
+            bindings = <&kp N9>, <&kp RIGHT_PARENTHESIS>; // Normal: 9, Shift: )
             mods = <MOD_LSFT>;
         };
     };
@@ -85,7 +85,7 @@
             //                 | GUI |  LWR  |   SPC    |       |   ENT    |  RSE   | ALT |
             bindings = <
                 // Row 1
-                &kp ESC      &kp shift_1  &kp shift2  &kp shift_3  &kp shift_4  &kp shift_5  &kp shift_6  &kp shift_7  &kp shift_8  &kp shift_9  &kp shift_0  &kp ESC 
+                &kp ESC      &kp shift_1  &kp shift2  &kp shift_3  &kp shift_4  &kp shift_5  &kp shift_6  &kp shift_7  &kp shift_8  &kp shift_9  &kp &kp ESC 
 
                 // Row 2
                 &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Z      &kp U      &kp I      &kp O     &kp P     &kp BSPC
@@ -94,7 +94,7 @@
                 &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
 
                 // Row 4
-                &kp LCTRL   &kp Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp ESC
+                &kp LCTRL   &kp Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp COMMA  &kp DOT   &kp KP_MINUS &kp ESC
 
                 // Thumb row (modifiers and space/return)
                            &kp LGUI  &mo 2 &kp RET              &kp SPACE     &mo 3    &kp ESC
