@@ -72,6 +72,24 @@
             bindings = <&kp N9>, <&kp RIGHT_PARENTHESIS>; // Normal: 9, Shift: )
             mods = <MOD_LSFT>;
         };
+        shift_dot: shift_dot_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>; // Normal: . , Shift: :
+            mods = <MOD_LSFT>;
+        };
+        shift_minus: shift_minus_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MINUS>, <&kp UNDERSCORE>; // Normal: - , Shift: _
+            mods = <MOD_LSFT>;
+        };
+        shift_comma: shift_comma_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>; // Normal: , , Shift: ;
+            mods = <MOD_LSFT>;
+        };
     };
         keymap {
         compatible = "zmk,keymap";
@@ -94,7 +112,7 @@
                 &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
 
                 // Row 4
-                &kp LCTRL   &kp Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp COMMA  &kp DOT   &kp KP_MINUS &kp ESC
+                &kp LCTRL   &kp Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &shift_comma  &shift_dot  &shift_minus   &kp ESC
 
                 // Thumb row (modifiers and space/return)
                            &kp LGUI  &mo 2 &kp RET              &kp SPACE     &mo 3    &kp ESC
