@@ -1,4 +1,4 @@
-[![.github/workflows/build.yml](https://github.com/Neil-Reichlin/split-kb/actions/workflows/build.yml/badge.svg)](https://github.com/Neil-Reichlin/split-kb/actions/workflows/build.yml
+[![.github/workflows/build.yml](https://github.com/Neil-Reichlin/split-kb/actions/workflows/build.yml/badge.svg)](https://github.com/Neil-Reichlin/split-kb/actions/workflows/build.yml)
 
 
 # Stealth
