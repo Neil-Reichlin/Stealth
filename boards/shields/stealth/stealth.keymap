@@ -8,9 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#include "../../include/zmk-helpers/helper.h"
-#include "../../include/zmk-helpers/key-labels/34.h"
-#include "../../include/zmk-helpers/unicode-chars/german.dtsi"
+#include "../../../include/zmk-helpers/helper.h"
+#include "../../../include/zmk-helpers/key-labels/34.h"
+#include "../../../include/zmk-helpers/unicode-chars/german.dtsi"
 
 
 / {
