@@ -85,7 +85,7 @@
             //                 | GUI |  LWR  |   SPC    |       |   ENT    |  RSE   | ALT |
             bindings = <
                 // Row 1
-                &kp ESC      &shift_1  &shift2  &shift_3  &shift_4  &shift_5  &shift_6  &shift_7  &shift_8  &shift_9  &shift_0 &kp ESC 
+                &kp ESC      &shift_1  &shift_2  &shift_3  &shift_4  &shift_5  &shift_6  &shift_7  &shift_8  &shift_9  &shift_0 &kp ESC 
 
                 // Row 2
                 &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Z      &kp U      &kp I      &kp O     &kp P     &kp BSPC
