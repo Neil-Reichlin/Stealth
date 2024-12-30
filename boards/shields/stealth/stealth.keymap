@@ -114,7 +114,7 @@
                 &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
 
                 // Row 4
-                &kp LCTRL   &kp DE_Z     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp DE_COMMA  &kp DE_PERIOD  &kp MINUS   &kp ESC
+                &kp LCTRL   &kp DE_Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp DE_COMMA  &kp DE_PERIOD  &kp MINUS   &kp ESC
 
                 // Thumb row (modifiers and space/return)
                            &kp LGUI  &mo 1  &kp RET              &kp SPACE     &kp ESC    &kp N1
