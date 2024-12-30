@@ -105,7 +105,7 @@
             //                 | GUI |  LWR  |   SPC    |       |   ENT    |  RSE   | ALT |
             bindings = <
                 // Row 1
-                &kp ESC      &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N9 &kp BSPC 
+                &kp ESC      &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0 &kp BSPC 
 
                 // Row 2
                 &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T           &kp DE_Z      &kp U      &kp I      &kp O     &kp P     &kp DE_U_UMLAUT
