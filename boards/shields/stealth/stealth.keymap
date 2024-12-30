@@ -8,9 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#include "../../../include/zmk-helpers/helper.h"
-#include "../../../include/zmk-helpers/key-labels/34.h"
-#include "../../../include/zmk-helpers/unicode-chars/german.dtsi"
+#include "../../../include/locale/keys_de_swiss.h"
+
+
 
 
 / {
@@ -107,13 +107,13 @@
             //                 | GUI |  LWR  |   SPC    |       |   ENT    |  RSE   | ALT |
             bindings = <
                 // Row 1
-                &kp ESC      &shift_1  &shift_2  &shift_3  &shift_4  &shift_5  &shift_6  &shift_7  &shift_8  &shift_9  &shift_0 &kp BSPC 
+                &kp ESC      &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N9 &kp BSPC 
 
                 // Row 2
-                &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Z      &kp U      &kp I      &kp O     &kp P     &de_ue
+                &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Z      &kp U      &kp I      &kp O     &kp P     &kp DE_U_UMLAUT
 
                 // Row 3
-                &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &de_oe  &de_ae
+                &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
 
                 // Row 4
                 &kp LCTRL   &kp Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &shift_comma  &shift_dot  &shift_minus   &kp ESC
