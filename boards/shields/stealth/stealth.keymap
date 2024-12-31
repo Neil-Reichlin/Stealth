@@ -114,7 +114,7 @@
                 &kp LSHFT  &kp A     &kp S     &kp D     &kp F     &kp G           &kp H      &kp J      &kp K      &kp L     &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
 
                 // Row 4
-                &kp LCTRL   &kp DE_Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp DE_COMMA  &kp DE_PERIOD  &kp MINUS   &kp ESC
+                &kp LCTRL   &kp DE_Y     &kp X     &kp C     &kp V     &kp B           &kp N      &kp M      &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS   &kp ESC
 
                 // Thumb row (modifiers and space/return)
                            &kp LGUI  &mo 1  &kp RET              &kp SPACE     &kp ESC    &kp N1
@@ -129,7 +129,7 @@
             //                 | GUI |  LWR  |   SPC    |       |   ENT    |  RSE   | ALT |
             bindings = <
                 // Row 1
-                &kp ESC      &kp N1    &kp DE_AT_SIGN    &kp N3    &kp N4    &kp N5          &kp N6     &kp N7     &kp N8     &kp N9    &kp DE_QUESTION    &kp BSPC
+                &kp ESC      &kp N1    &kp DE_AT_SIGN    &kp DE_HASH   &kp N4    &kp N5          &kp N6     &kp N7     &kp N8     &kp N9    &kp DE_QUESTION    &kp BSPC
 
                 // Row 2
                 &kp TAB    &kp Q     &kp W      &kp UP_ARROW    &kp DE_TILDE     &kp DE_PIPE           &kp DE_LEFT_BRACKET   &kp DE_RIGHT_BRACKET  &kp DE_EXCLAMATION     &kp DE_DOLLAR     &kp DE_EQUAL     &kp BSPC
@@ -138,7 +138,7 @@
                 &kp LSHFT   &kp A    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW     &kp G     &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS   &kp DE_RIGHT_PARENTHESIS   &kp DE_SEMI  &kp DE_SQT
 
                 // Row 4
-                &kp LCTRL   &kp Z     &kp X     &kp C     &kp V     &kp DE_GRAVE           &kp DE_LESS_THAN  &kp DE_GREATER_THAN   &kp DE_COMMA  &kp DE_DOT   &kp DE_FSLH  &kp ESC
+                &kp LCTRL   &kp DE_BACKSLASH    &kp X     &kp C     &kp V     &kp DE_GRAVE           &kp DE_LESS_THAN  &kp DE_GREATER_THAN   &kp DE_COMMA  &kp DE_DOT   &kp DE_FSLH  &kp ESC
 
                 // Thumb row (modifiers and space/return)
                            &kp LGUI  &kp N1     &kp RET              &kp SPACE     &kp  DE_SLASH   &kp  DE_EQUAL
