@@ -135,7 +135,7 @@
                 &kp TAB    &kp Q     &kp W      &kp UP_ARROW    &kp DE_TILDE     &kp DE_PIPE           &kp DE_LEFT_BRACKET   &kp DE_RIGHT_BRACKET  &kp DE_EXCLAMATION     &kp DE_DOLLAR     &kp DE_EQUAL     &kp BSPC
 
                 // Row 3
-                &kp LSHFT   &kp A    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW     &kp G     &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS   &kp DE_RIGHT_PARENTHESIS   &kp DE_SEMI  &kp DE_SQT
+                &kp LSHFT   &kp A    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW     &kp DE_BSLH     &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS   &kp DE_RIGHT_PARENTHESIS   &kp DE_SEMI  &kp DE_SQT
 
                 // Row 4
                 &kp LCTRL   &kp DE_BACKSLASH    &kp X     &kp C     &kp V     &kp DE_GRAVE           &kp DE_LESS_THAN  &kp DE_GREATER_THAN   &kp DE_COMMA  &kp DE_DOT   &kp DE_FSLH  &kp ESC
