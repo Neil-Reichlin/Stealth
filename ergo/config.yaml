@@ -1,0 +1,558 @@
+units:
+  #unit for choc keys
+  kx: cx 
+  ky: cy 
+
+  ps: 19
+  ph: 19
+  #padding for pcb
+  px: kx + 2
+  py: ky + 2
+
+  cutout_sw: 13.8
+
+
+points:
+  zones:
+    matrix:
+      anchor:
+        shift: [100, -150]
+      key:
+        padding: ph
+        spread: ps
+      columns:
+        pinky:
+          key.column_net: COL0
+        shift:
+          key.stagger: 2
+          key.column_net: COL1
+        ring:
+          key.stagger: 7
+          key.column_net: COL2
+        middle:
+          key.stagger: 5
+          key.column_net: COL3
+        index:
+          key.stagger: -6
+          key.column_net: COL4
+        inner:
+          key.stagger: -2
+          key.column_net: COL5
+      rows:
+        bottom:
+          row_net: ROW4
+        home:
+          row_net: ROW3
+        num:
+          row_net: ROW2
+        top:
+          row_net: ROW1
+    thumbfan:
+      key:
+        padding: ky
+        spread: kx
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-18, -19]
+      columns:
+        near:
+          key:
+            column_net: COL3
+        home:
+          key:
+            splay: -10
+            origin: [-11.75, -20]
+            column_net: COL4
+        far:
+          key:
+            width: 1.5kx
+            splay: 80
+            origin: [2, 2]
+            column_net: COL5
+            tags:
+              - key_1_5u
+      rows:
+        thumb:
+          row_net: ROW0
+
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [px, py]
+  keys:
+  - what: rectangle
+    where: true
+    bound: false
+    size: [kx-0.5,ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: thumbfan_far_thumb
+          shift: [0.5px,-0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [-0.75px,-0.5py]
+        - ref: thumbfan_home_thumb
+          shift: [0.5px,-0.7py]
+        - ref: thumbfan_home_thumb
+          shift: [0.5px,-0.5py]
+        - ref: thumbfan_home_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: thumbfan_near_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_ring_bottom
+          shift: [1.45px, -0.99py]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_pinky_top
+          shift: [0.4px, 0.5py]
+        - ref: matrix_shift_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_shift_top
+          shift: [0.4px,0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_ring_top
+          shift: [0.4px, 0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [-0.4px,0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_top
+          shift: [-0.4px,0.5py]
+        - ref: matrix_inner_top
+          shift: [1.6px,0.5py]
+        - ref: matrix_inner_top
+          shift: [1.6px,-2.15py]
+        - ref: thumbfan_far_thumb
+          shift: [1.0px,-0.5py]
+        
+
+      fillet: 2
+  plate:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: thumbfan_far_thumb
+          shift: [0.5px,-0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [-0.75px,-0.5py]
+        - ref: thumbfan_home_thumb
+          shift: [0.5px,-0.7py]
+        - ref: thumbfan_home_thumb
+          shift: [0.5px,-0.5py]
+        - ref: thumbfan_home_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: thumbfan_near_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_ring_bottom
+          shift: [1.45px, -0.99py]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_pinky_top
+          shift: [0.4px, 0.5py]
+        - ref: matrix_shift_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_shift_top
+          shift: [0.4px,0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_ring_top
+          shift: [0.4px, 0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [-0.4px,0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_top
+          shift: [-0.4px,0.5py]
+        - ref: matrix_inner_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_top
+          shift: [0.5px,-3.2py]
+        - ref: thumbfan_far_thumb
+          shift: [0.75px,-0.5py]
+        
+
+      fillet: 2
+
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+  
+  key_cutout:
+    - what: rectangle
+      where: true
+      size: cutout_sw
+
+  switchplate:
+    - name: plate
+    - operation: subtract
+      name: key_cutout
+  
+  keycaps:
+    - what: rectangle
+      fillet: 2
+      where: [key_1_5u]
+      size: [kx*1.5, ky]
+    - what: rectangle
+      fillet: 2
+      where: true
+      size: [kx, ky]
+  
+  check_pcb:
+    - name: board
+    - operation: stack
+      name: keycaps
+
+  check_plate:
+    - name: plate
+    - operation: stack
+      name: keycaps
+
+  all_together:
+    - name: board
+    - operation: stack
+      name: switchplate
+    - operation: stack
+      name: keycaps
+
+
+pcbs.keyboard_pcb:
+  outlines:
+    main:
+      outline: board  
+    keys:
+      outline: switchplate
+      layer: Eco1.User
+    keycaps:
+      outline: keycaps
+      layer: Eco2.User 
+  footprints:
+    # Hotswap Choc keys.
+    choc_hotswap:
+      what: choc
+      where: true
+      params:
+        keycaps: true
+        reverse: true
+        hotswap: true
+        from: "{{column_net}}"
+        to: "{{colrow}}"
+    # Through Hole or SMD Diodes
+    diode:
+      what: diode
+      where: true
+      params:
+        from: "{{colrow}}"
+        to: "{{row_net}}"
+      adjust:
+        shift: [0, -5]
+    nicenano:
+      what: nicenanov2
+      params:
+        reversible: true
+        include_extra_pins: true
+        reverse_mount: true
+        P2: COL0
+        P3: COL1
+        P4: COL2
+        P5: COL3
+        P6: COL4
+        P7: COL5
+        P21: ROW0
+        P20: ROW1
+        P19: ROW2
+        P18: ROW3
+        P15: ROW4
+      where:
+        ref: matrix_inner_top
+        shift: [21,-10]
+        rotate: 0
+    reset_front:
+      what: button
+      params:
+        from: GND
+        to: RST
+      where:
+        ref: matrix_inner_top
+        shift: [16,-30]
+        rotate: 0
+    reset_back:
+      what: button
+      params:
+        from: GND
+        to: RST
+        side: B
+      where:
+        ref: matrix_inner_top
+        shift: [16,-30]
+        rotate: 0
+    onoff_front:
+      what: slider
+      params:
+        from: VCC
+        to: GND
+      where: 
+        ref: matrix_inner_top
+        shift: [35, -50]
+        rotate: -70
+    onoff_back:
+      what: slider
+      params:
+        from: VCC
+        to: GND
+        side: B
+      where: 
+        ref: matrix_inner_top
+        shift: [35, -50]
+        rotate: -70
+    battery_front:
+      what: jstph
+      params:
+        pos: VCC
+        neg: GND
+      where:
+        ref: matrix_inner_top
+        shift: [22, -31]
+        rotate: 90 
+    battery_back:
+      what: jstph
+      params:
+        side: B
+        pos: VCC
+        neg: GND
+      where:
+        ref: matrix_inner_top
+        shift: [22, -31]
+        rotate: 90 
+    trrs_front:
+      what: trrs
+      params:
+        reverse: true
+        symmetric: true
+        A: VCC
+        B: GND
+        C: P1 
+        D: P0
+      where:
+        ref: matrix_index_top
+        shift: [48, -43]
+        rotate: -90
+    hole_one:
+      what: hole
+      where:
+        ref: matrix_inner_top
+        shift: [-0.525kx, -2]
+        rotate: 0
+    hole_two:
+      what: hole
+      where:
+        ref: matrix_pinky_top
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_three:
+      what: hole
+      where:
+        ref: matrix_pinky_bottom
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_four:
+      what: hole
+      where:
+        ref: matrix_inner_bottom
+        shift: [-0.525kx, -3]
+        rotate: 0
+    hole_five:
+      what: hole
+      where:
+        ref: matrix_middle_home
+        shift: [-0.525kx,0.525kx]
+        rotate: 0
+    hole_six:
+      what: hole
+      where:
+        ref: matrix_ring_bottom
+        shift: [0.525kx,-1]
+        rotate: 0
+    hole_seven:
+      what: hole
+      where:
+        ref: thumbfan_far_thumb
+        shift: [-5,0.58kx]
+        rotate: 0
+    hole_eight:
+      what: hole
+      where:
+        ref: matrix_pinky_home
+        shift: [0.525kx,0.56kx]
+        rotate: 0
+    hole_nine:
+      what: hole
+      where:
+        ref: matrix_middle_top
+        shift: [-0.525kx,-0.525kx]
+        rotate: 0
+    hole_ten:
+      what: hole
+      where:
+        ref: matrix_index_home
+        shift: [0.525kx,0.525kx]
+        rotate: 0
+
+pcbs.bottom_plate:
+  outlines:
+    main:
+      outline: board
+  footprints:
+    hole_one:
+      what: hole
+      where:
+        ref: matrix_inner_top
+        shift: [-0.525kx, -2]
+        rotate: 0
+    hole_two:
+      what: hole
+      where:
+        ref: matrix_pinky_top
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_three:
+      what: hole
+      where:
+        ref: matrix_pinky_bottom
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_four:
+      what: hole
+      where:
+        ref: matrix_inner_bottom
+        shift: [-0.525kx, -3]
+        rotate: 0
+    hole_five:
+      what: hole
+      where:
+        ref: matrix_middle_home
+        shift: [-0.525kx,0.525kx]
+        rotate: 0
+    hole_six:
+      what: hole
+      where:
+        ref: matrix_ring_bottom
+        shift: [0.525kx,-1]
+        rotate: 0
+    hole_seven:
+      what: hole
+      where:
+        ref: thumbfan_far_thumb
+        shift: [-5,0.58kx]
+        rotate: 0
+    hole_eight:
+      what: hole
+      where:
+        ref: matrix_pinky_home
+        shift: [0.525kx,0.56kx]
+        rotate: 0
+    hole_nine:
+      what: hole
+      where:
+        ref: matrix_middle_top
+        shift: [-0.525kx,-0.525kx]
+        rotate: 0
+    hole_ten:
+      what: hole
+      where:
+        ref: matrix_index_home
+        shift: [0.525kx,0.525kx]
+        rotate: 0
+
+pcbs.switchplate:
+  outlines: 
+    main:
+      outline: switchplate
+  footprints:
+    hole_one:
+      what: hole
+      where:
+        ref: matrix_inner_top
+        shift: [-0.525kx, -2]
+        rotate: 0
+    hole_two:
+      what: hole
+      where:
+        ref: matrix_pinky_top
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_three:
+      what: hole
+      where:
+        ref: matrix_pinky_bottom
+        shift: [0.525kx, -2]
+        rotate: 0
+    hole_four:
+      what: hole
+      where:
+        ref: matrix_inner_bottom
+        shift: [-0.525kx, -3]
+        rotate: 0
+    hole_five:
+      what: hole
+      where:
+        ref: matrix_middle_home
+        shift: [-0.525kx,0.525kx]
+        rotate: 0
+    hole_six:
+      what: hole
+      where:
+        ref: matrix_ring_bottom
+        shift: [0.525kx,-1]
+        rotate: 0
+    hole_seven:
+      what: hole
+      where:
+        ref: thumbfan_far_thumb
+        shift: [-5,0.58kx]
+        rotate: 0
+    hole_eight:
+      what: hole
+      where:
+        ref: matrix_pinky_home
+        shift: [0.525kx,0.56kx]
+        rotate: 0
+    hole_nine:
+      what: hole
+      where:
+        ref: matrix_middle_top
+        shift: [-0.525kx,-0.525kx]
+        rotate: 0
+    hole_ten:
+      what: hole
+      where:
+        ref: matrix_index_home
+        shift: [0.525kx,0.525kx]
+        rotate: 0
+
+      
+
+
+
+
+  
+      
