@@ -14,3 +14,15 @@
                 <&pro_micro 6 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 7 GPIO_ACTIVE_HIGH>;
 };
+
+/ {
+    chosen {
+        zmk,studio-rpc-uart = &studio_rpc_uart;
+    };
+};
+
+&zephyr_udc0 {
+    studio_rpc_uart: studio_rpc_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
