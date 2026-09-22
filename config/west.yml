@@ -7,7 +7,11 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Pinned to a commit verified to build cleanly for this config,
+      # rather than tracking main, so upstream ZMK changes (like the
+      # Zephyr 4.1 board-variant migration) can't break the build
+      # without warning. Bump deliberately and test before updating.
+      revision: 9ebbeff0a8b69a42f14aec022cdf16c7a107b9e0
       import: app/west.yml
   self:
     path: config

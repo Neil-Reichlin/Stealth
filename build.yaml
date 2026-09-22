@@ -5,14 +5,14 @@
 # pass flags to the build command and `artifact-name` to assign a name to
 # distinguish build outputs from each other:
 #
-board: [ "nice_nano" ]
+board: [ "nice_nano//zmk" ]
 shield: [ "stealth_left", "stealth_right" ]
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: stealth_left
     # Compile in every core behavior (not just the ones the keymap
     # currently uses) so ZMK Studio can bind any of them on the fly.
     cmake-args: -DDTS_EXTRA_CPPFLAGS=-DZMK_BEHAVIORS_KEEP_ALL
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: stealth_right
 
