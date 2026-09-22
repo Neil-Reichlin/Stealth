@@ -1,6 +1,80 @@
+#include <physical_layouts.dtsi>
+
 / {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
+
+        // Positions below are approximate (in 1/100ths of a key unit) and
+        // mirror the column stagger from ergo/config.yaml. They only need to
+        // be close enough for ZMK Studio's visual editor - the actual key
+        // order/count is what matters functionally, and that matches the
+        // &default_transform map in stealth.dtsi exactly (4 rows x 12 cols,
+        // then the 6 thumb keys).
+        keys  =
+            // Row 1 (top)
+            <&key_physical_attrs 100 100    0    0 0 0 0>
+          , <&key_physical_attrs 100 100  100   11 0 0 0>
+          , <&key_physical_attrs 100 100  200   37 0 0 0>
+          , <&key_physical_attrs 100 100  300   26 0 0 0>
+          , <&key_physical_attrs 100 100  400 (-32) 0 0 0>
+          , <&key_physical_attrs 100 100  500 (-11) 0 0 0>
+          , <&key_physical_attrs 100 100  800 (-11) 0 0 0>
+          , <&key_physical_attrs 100 100  900 (-32) 0 0 0>
+          , <&key_physical_attrs 100 100 1000   26 0 0 0>
+          , <&key_physical_attrs 100 100 1100   37 0 0 0>
+          , <&key_physical_attrs 100 100 1200   11 0 0 0>
+          , <&key_physical_attrs 100 100 1300    0 0 0 0>
+
+            // Row 2
+          , <&key_physical_attrs 100 100    0  100 0 0 0>
+          , <&key_physical_attrs 100 100  100  111 0 0 0>
+          , <&key_physical_attrs 100 100  200  137 0 0 0>
+          , <&key_physical_attrs 100 100  300  126 0 0 0>
+          , <&key_physical_attrs 100 100  400   68 0 0 0>
+          , <&key_physical_attrs 100 100  500   89 0 0 0>
+          , <&key_physical_attrs 100 100  800   89 0 0 0>
+          , <&key_physical_attrs 100 100  900   68 0 0 0>
+          , <&key_physical_attrs 100 100 1000  126 0 0 0>
+          , <&key_physical_attrs 100 100 1100  137 0 0 0>
+          , <&key_physical_attrs 100 100 1200  111 0 0 0>
+          , <&key_physical_attrs 100 100 1300  100 0 0 0>
+
+            // Row 3 (home)
+          , <&key_physical_attrs 100 100    0  200 0 0 0>
+          , <&key_physical_attrs 100 100  100  211 0 0 0>
+          , <&key_physical_attrs 100 100  200  237 0 0 0>
+          , <&key_physical_attrs 100 100  300  226 0 0 0>
+          , <&key_physical_attrs 100 100  400  168 0 0 0>
+          , <&key_physical_attrs 100 100  500  189 0 0 0>
+          , <&key_physical_attrs 100 100  800  189 0 0 0>
+          , <&key_physical_attrs 100 100  900  168 0 0 0>
+          , <&key_physical_attrs 100 100 1000  226 0 0 0>
+          , <&key_physical_attrs 100 100 1100  237 0 0 0>
+          , <&key_physical_attrs 100 100 1200  211 0 0 0>
+          , <&key_physical_attrs 100 100 1300  200 0 0 0>
+
+            // Row 4 (bottom)
+          , <&key_physical_attrs 100 100    0  300 0 0 0>
+          , <&key_physical_attrs 100 100  100  311 0 0 0>
+          , <&key_physical_attrs 100 100  200  337 0 0 0>
+          , <&key_physical_attrs 100 100  300  326 0 0 0>
+          , <&key_physical_attrs 100 100  400  268 0 0 0>
+          , <&key_physical_attrs 100 100  500  289 0 0 0>
+          , <&key_physical_attrs 100 100  800  289 0 0 0>
+          , <&key_physical_attrs 100 100  900  268 0 0 0>
+          , <&key_physical_attrs 100 100 1000  326 0 0 0>
+          , <&key_physical_attrs 100 100 1100  337 0 0 0>
+          , <&key_physical_attrs 100 100 1200  311 0 0 0>
+          , <&key_physical_attrs 100 100 1300  300 0 0 0>
+
+            // Thumb row: left far/home/near, then right near/home/far
+          , <&key_physical_attrs 150 100  180  490 0 0 0>
+          , <&key_physical_attrs 100 100  350  440 0 0 0>
+          , <&key_physical_attrs 100 100  480  400 0 0 0>
+          , <&key_physical_attrs 100 100  820  400 0 0 0>
+          , <&key_physical_attrs 100 100  950  440 0 0 0>
+          , <&key_physical_attrs 150 100 1070  490 0 0 0>
+          ;
     };
 };
