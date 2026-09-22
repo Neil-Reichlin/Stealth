@@ -85,6 +85,72 @@ So for a backslash, use `&kp DE_BACKSLASH` (or the shorter alias `&kp DE_BSLH`) 
 `&kp BSLH` - on a Swiss keyboard that's AltGr + the key next to left Shift, and `DE_BACKSLASH`
 sends exactly that physical combination.
 
+### Using these in ZMK Studio
+
+You can't search for `DE_A_UMLAUT` (etc.) by name in Studio - these are C preprocessor macros
+that get replaced with a raw keycode (plus an optional Shift/AltGr/Ctrl modifier) at compile
+time, so by the time the firmware is running, the name is gone. Studio only ever sees "base
+key + modifier," and displays the base key using its generic US name.
+
+You can still build the identical binding by hand: in Studio, add a `Key Press` (`&kp`)
+binding, pick the base key from the table below (shown by its Studio/US name), and toggle the
+matching modifier next to it.
+
+| Character | Base key in Studio | Modifier |
+|---|---|---|
+| `ä` | Apostrophe / Quote | none |
+| `ö` | Semicolon / Colon | none |
+| `ü` | Left Bracket | none |
+| `à` | Apostrophe / Quote | Shift |
+| `è` | Left Bracket | Shift |
+| `é` | Semicolon / Colon | Shift |
+| `ç` | 4 | Shift |
+| `¨` (dead key) | Right Bracket | none |
+| `´` (dead key) | Minus | AltGr |
+| `°` | 4 | AltGr |
+| `§` | Grave/Tilde (`` ` ``) | none |
+| `€` | E | AltGr |
+| `£` | Backslash/Pipe | Shift |
+| `¢` | 8 | AltGr |
+| `¦` | 1 | AltGr |
+| `¬` | 6 | AltGr |
+| `~` | Equal/Plus | AltGr |
+| `` ` `` | Equal/Plus | Shift |
+| `^` | Equal/Plus | none |
+| `\` | Non-US Backslash/Pipe | AltGr |
+| `\|` | 7 | AltGr |
+| `[` | Left Bracket | AltGr |
+| `]` | Right Bracket | AltGr |
+| `{` | Apostrophe / Quote | AltGr |
+| `}` | Backslash/Pipe | AltGr |
+| `@` | 2 | AltGr |
+| `#` | 3 | AltGr |
+| `$` | Backslash/Pipe | none |
+| `%` | 5 | Shift |
+| `&` | 6 | Shift |
+| `*` | 3 | Shift |
+| `+` | 1 | Shift |
+| `-` | Slash | none |
+| `_` | Slash | Shift |
+| `=` | 0 | Shift |
+| `/` | 7 | Shift |
+| `!` | Right Bracket | Shift |
+| `?` | Minus | Shift |
+| `"` | 2 | Shift |
+| `'` | Minus | none |
+| `,` | Comma | none |
+| `.` | Period | none |
+| `:` | Period | Shift |
+| `;` | Comma | Shift |
+| `<` | Non-US Backslash/Pipe | none |
+| `>` | Non-US Backslash/Pipe | Shift |
+| `(` | 8 | Shift |
+| `)` | 9 | Shift |
+| `y` | physical key **Z** | none |
+| `z` | physical key **Y** | none |
+
+Letters other than `y`/`z` and digits `0`-`9` map 1:1 to the same-named US key, no modifier.
+
 ## Flashing
 
 Every push builds both halves' firmware via GitHub Actions. Open the latest
